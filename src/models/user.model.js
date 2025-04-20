@@ -49,7 +49,7 @@ const userSchema = new Schema({
 
 userSchema.pre("save", async function (next) {
 
-    if (!this.isModified("password") === false) {
+    if (this.isModified("password") === false) {
         return next();
     }
 
