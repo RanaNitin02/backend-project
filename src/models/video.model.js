@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 import { User } from "./user.model.js";
 import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
-const videoSchema = new Schema({
+export const videoSchema = new Schema({
     videoFile: {
         type: String,   // cloudinary url
         required: true,
